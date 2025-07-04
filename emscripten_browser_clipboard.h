@@ -55,9 +55,9 @@ EM_JS_INLINE(void, copy_async_js, (char const *content_ptr), {
            .then(()  => {})
            .catch(() => {alert("something went wrong");});
   } else {
-  /// Fallback method using document.execCommand('copy'), 
-  /// this fallback method is not guaranteed to work in all browsers since
-  /// document.execCommand('copy') is deprecated.  
+    // Fallback method using document.execCommand('copy'), 
+    // this fallback method is not guaranteed to work in all browsers since
+    // document.execCommand('copy') is deprecated.  
     let textArea = document.createElement("textarea");
     document.body.appendChild(textArea);
         
